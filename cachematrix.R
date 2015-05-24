@@ -3,7 +3,7 @@
 
 ## This function creates a special "matrix" object that can cache its inverse.
 
-makeCacheMatrix <- function(my_x = matrix()) {
+makeVector <- function(my_x = matrix()) {
     my_inv <- NULL
     set <- function(x) {
         my_x <<- x;
@@ -22,7 +22,7 @@ makeCacheMatrix <- function(my_x = matrix()) {
 ## If the inverse has already been calculated (and the matrix has not changed), then the 
 ## cachesolve should retrieve the inverse from the cache.
 
-cacheSolve <- function(x, ...) {
+cachemean <- function(x, ...) {
    my_inv <- x$getinv()
     if(!is.null(my_inv)) {
         message("Looking up data from cache")
